@@ -1,0 +1,38 @@
+{
+  "name": "tasktime",
+  "version": "0.0.1",
+  "description": "Gerenciador de tarefas que calcula e mostra ao usuário o tempo que o mesmo levou desde o cadastro até a conclusão da tarefa",
+  "main": "index.html",
+  "scripts": {
+    "test": "node run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2c2a1jdev/taskslist.git"
+  },
+  "keywords": [
+    "todo",
+    "list",
+    "task",
+    "manager",
+    "tasks",
+    "counttime",
+    "count",
+    "time",
+    "contabilizar",
+    "cronometrar",
+    "tempo",
+    "Gerenciador",
+    "tarefa"
+  ],
+  "author": "Alan Fernandes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2c2a1jdev/taskslist/issues"
+  },
+  "homepage": "https://github.com/2c2a1jdev/taskslist#readme",
+  "dependencies": {
+    "cep-promise": "^4.1.1",
+    "node": "^16.9.1"
+  }
+}

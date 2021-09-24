@@ -1,0 +1,151 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    background-color: rgb(5, 5, 5);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+p, label {
+    color: rgba(158, 159, 160, 63);
+    font-size: 20px;
+}
+
+header {
+    grid-area: header;
+    border-radius: 10px;
+    background-color: rgb(23, 23, 23);
+    border-top: 1px solid rgba(23, 23, 23, 0.2);
+    border-bottom: 1px solid rgba(23, 23, 23, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    
+}
+
+section {
+    border-radius: 10px;
+    background-color: rgb(11, 11, 11);
+}
+
+footer {
+    grid-area: footer;
+    border-radius: 10px;
+    background-color: rgb(23, 23, 23);
+    border-top: 1px solid rgba(23, 23, 23, 0.2);
+    border-bottom: 1px solid rgba(23, 23, 23, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+    border: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    background-color: rgb(10, 10, 10);
+    color: rgb(255, 255, 255);
+    transition: .1s
+}
+
+.input:focus {
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0 0 1pt 1pt rgb(255, 255, 0)
+}
+
+.btn {
+    outline: none;
+    border: 0;
+    font-size: 16px;
+    line-height: 1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 0);
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: rgba(255, 255, 0, 0.329);
+    color: white;
+}
+
+.btn-outline {
+    outline: none;
+    border: solid 1px;
+    font-size: 16px;
+    line-height: 1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border-color: rgb(255, 255, 0);
+    background-color: rgb(10, 10, 10);
+    color: rgb(255, 255, 0);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.btn-outline:hover{
+    background-color: rgba(255, 255, 0, 0.822);
+    color: rgb(0, 0, 0);
+}
+
+.checkbox {
+    background-color: rgb(10, 10, 10);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 5vh 85vh 5vh;
+    grid-gap: 8px;
+    grid-template-areas: "header header header"
+                         "inputSection incompleteSection completeSection"
+                         "footer footer footer ";
+    
+}
+
+.contentInput {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(23, 23, 23);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    border-top: 1px solid rgba(130, 130, 130, 0.2);
+    border-left: 1px solid rgba(130, 130, 130, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(23, 23, 23);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    border-top: 1px solid rgba(130, 130, 130, 0.2);
+    border-left: 1px solid rgba(130, 130, 130, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.span {
+    color: rgb(255, 255, 0);
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 1fr 1fr 1fr 0.2fr;
+      grid-template-areas:
+        "header"
+        "inputSection"
+        "incompleteSection"
+        "completeSection"
+        "footer";
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/index.js"></script>
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/9d349dd044.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <nav></nav>
+            </header>
+                <section id="inputSection">
+                    <h1><i class="fas fa-tasks"></i> tasktime</h1>
+                    <div class="contentInput">
+                        <form>
+                            <input class="input" type="text" id="inputNewTask" placeholder="Digite uma nova tarefa...">
+                            <input class="btn" type="submit" value="adicionar">
+                        </form>
+                        <p>
+                            Bem vindo ao tasktime!
+                            <br><br>
+                            Adicione suas tarefas que você necessita realizar no dia.
+                            <br><br>
+                            O sistema irá calcular o tempo entre a data de inserção e a data de conclusão
+                        </p>
+                    </div>
+                </section>
+                <section id="incompleteSection">
+                    <h1><i class="fas fa-sliders-h"></i> em andamento</h1>
+                    <div class="content" id="content">
+                        <input class="checkbox" type="checkbox" id="check" />
+                        <label for="check">task</label>
+                        <button class="btn-outline">excluir</button>
+                    </div>
+                </section>
+                <section id="completeSection">
+                    <h1><i class="fas fa-check"></i> finalizadas</h1>
+                    <div class="content">
+                        <p>task</p>
+                        <p class="span">50 minutos</p>
+                    </div>
+                </section>
+            <footer>
+                
+            </footer>
+        </div>
+    </body>
+</html>
