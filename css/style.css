@@ -95,7 +95,12 @@ footer {
 }
 
 .checkbox {
-    background-color: rgb(10, 10, 10);
+    width: 20px;
+    height: 20px;
+}
+
+input:checked {
+    accent-color: rgb(255, 255, 0);
 }
 
 .container {
