@@ -33,9 +33,6 @@ function saveOnLocalStorage() {
         const text = JSON.stringify(tasksArr)
         localStorage.setItem("tasksArr", text)
     }
-
-
-    
 }
 
 window.onload = function showTasksOnScreen() {
@@ -55,7 +52,7 @@ window.onload = function showTasksOnScreen() {
     for(var i = 0; i<tasksArr.length; i++){
         const t = tasksArr[i]
         count = count + 1
-        let checkId = "check" + count.toString()
+        checkId = "check" + count.toString()
         dataToShow += `
         <div class="content">
             <input class="checkbox" type="checkbox" id="${checkId}" />
