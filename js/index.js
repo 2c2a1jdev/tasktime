@@ -57,8 +57,9 @@ window.onload = function showTasksOnScreen() {
             <button class="btn-outline">excluir</button>
         </div>  
         `
-        const screen = document.getElementById('incompleteSection')
-        screen.innerHTML = dataToShow
     }
+
+    const screen = document.getElementById('incompleteSection')
+    screen.innerHTML = dataToShow
 
 }
