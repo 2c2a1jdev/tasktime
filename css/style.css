@@ -8,7 +8,7 @@ html, body {
 }
 
 h1 {
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 p, label {
@@ -23,7 +23,7 @@ input[type="checkbox"]{
 }
 
 input:checked {
-    accent-color: rgb(255, 255, 0);
+    accent-color: yellow;
 }
 
 header {
@@ -56,14 +56,14 @@ footer {
     font-size: 16px;
     border-radius: 30px;
     background-color: rgb(10, 10, 10);
-    color: rgb(255, 255, 255);
+    color: white;
     transition: .1s
 }
 
 .input:focus {
     outline: none;
     border-radius: 30px;
-    box-shadow: 0 0 1pt 1pt rgb(255, 255, 0)
+    box-shadow: 0 0 1pt 1pt yellow
 }
 
 .btn {
@@ -73,7 +73,7 @@ footer {
     line-height: 1;
     padding: 10px 20px;
     border-radius: 30px;
-    background-color: rgb(255, 255, 0);
+    background-color: yellow;
     color: black;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -81,8 +81,8 @@ footer {
 
 .btn:hover,
 .btn:focus{
-    background-color: rgba(255, 255, 0, 0.329);
-    color: white;
+    background-color: rgba(255, 255, 0, 0.750);
+    color: black;
 }
 
 .btn-outline {
@@ -92,9 +92,9 @@ footer {
     line-height: 1;
     padding: 10px 20px;
     border-radius: 30px;
-    border-color: rgb(255, 255, 0);
+    border-color: yellow;
     background-color: rgb(10, 10, 10);
-    color: rgb(255, 255, 0);
+    color: yellow;
     cursor: pointer;
     transition: all 0.2s linear;
 }
@@ -140,7 +140,7 @@ footer {
 }
 
 .span {
-    color: rgb(255, 255, 0);
+    color: yellow;
 }
 
 @media only screen and (max-width: 550px) {
