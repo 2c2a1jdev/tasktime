@@ -14,21 +14,27 @@ function createNewTask(task) {
 function saveOnLocalStorage() {
     const task = document.getElementById('inputNewTask').value
 
-    let tasksArr = []
-    dataText = localStorage.getItem('tasksArr')
-
-    if(dataText == null){
-        tasksArr = []
+    if(task == null || task == undefined || task === ""){
+        alert("Por favor, digite uma tarefa...")
     }else{
-        tasksArr = JSON.parse(dataText)
+        let tasksArr = []
+        dataText = localStorage.getItem('tasksArr')
+    
+        if(dataText == null){
+            tasksArr = []
+        }else{
+            tasksArr = JSON.parse(dataText)
+        }
+    
+        const tasksObj = createNewTask(task)
+    
+        tasksArr.push(tasksObj)
+    
+        const text = JSON.stringify(tasksArr)
+        localStorage.setItem("tasksArr", text)
     }
 
-    const tasksObj = createNewTask(task)
 
-    tasksArr.push(tasksObj)
-
-    const text = JSON.stringify(tasksArr)
-    localStorage.setItem("tasksArr", text)
     
 }
 
