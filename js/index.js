@@ -44,7 +44,7 @@ window.onload = function showTasksOnScreen() {
 
     let dataToShow = "";
     let checkId = ""
-    let count = 1
+    let count = 0
 
     for(var i = 0; i<tasksArr.length; i++){
         const t = tasksArr[i]
