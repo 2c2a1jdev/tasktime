@@ -49,7 +49,7 @@ window.onload = function showTasksOnScreen() {
     for(var i = 0; i<tasksArr.length; i++){
         const t = tasksArr[i]
         count = count + 1
-        let checkId = "checkId" + count.toString()
+        let checkId = "check" + count.toString()
         dataToShow += `
         <div class="content">
             <input class="checkbox" type="checkbox" id="${checkId}" />
