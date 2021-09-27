@@ -17,7 +17,7 @@
                 <section id="inputSection">
                     <h1><i class="fas fa-tasks"></i> tasktime</h1>
                     <div class="contentInput">
-                        <form>
+                        <form onsubmit="saveOnLocalStorage()">
                             <input class="input" type="text" id="inputNewTask" placeholder="Digite uma nova tarefa...">
                             <input class="btn" type="submit" value="adicionar">
                         </form>
@@ -30,17 +30,14 @@
                         </p>
                     </div>
                 </section>
-                <section id="incompleteSection">
+                <section>
                     <h1><i class="fas fa-sliders-h"></i> em andamento</h1>
-                    <div class="content" id="content">
-                        <input class="checkbox" type="checkbox" id="check" />
-                        <label for="check">task</label>
-                        <button class="btn-outline">excluir</button>
+                    <div id="incompleteSection">
                     </div>
                 </section>
-                <section id="completeSection">
+                <section>
                     <h1><i class="fas fa-check"></i> finalizadas</h1>
-                    <div class="content">
+                    <div id="completeSection" class="content">
                         <p>task</p>
                         <p class="span">50 minutos</p>
                     </div>
