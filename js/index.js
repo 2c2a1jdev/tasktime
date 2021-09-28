@@ -5,10 +5,24 @@ function createNewTask(task) {
     let tasks = {
         "ID": uid,
         "taskValue": task,
-        "isCompleted": false
+        "isCompleted": true
     }
 
     return tasks
+}
+
+let tasksArr = []
+
+const getArrOnLocalStorage = () => {
+    dataText = localStorage.getItem('tasksArr')
+
+    if(dataText == null){
+        tasksArr = []
+    }else{
+        tasksArr = JSON.parse(dataText)
+    }
+
+    return tasksArr
 }
 
 function saveOnLocalStorage() {
@@ -17,33 +31,18 @@ function saveOnLocalStorage() {
     if(task == null || task == undefined || task === ""){
         alert("Por favor, digite uma tarefa...")
     }else{
-        let tasksArr = []
-        dataText = localStorage.getItem('tasksArr')
-    
-        if(dataText == null){
-            tasksArr = []
-        }else{
-            tasksArr = JSON.parse(dataText)
-        }
-    
+        getArrOnLocalStorage()
         const tasksObj = createNewTask(task)
-    
         tasksArr.push(tasksObj)
-    
         const text = JSON.stringify(tasksArr)
         localStorage.setItem("tasksArr", text)
     }
 }
 
+
 window.onload = function showTasksOnScreen() {
 
-    dataText = localStorage.getItem('tasksArr')
-
-    if(dataText == null){
-        tasksArr = []
-    }else{
-        tasksArr = JSON.parse(dataText)
-    }
+    getArrOnLocalStorage()
 
     let dataToShow = "";
     let checkId = ""
@@ -62,7 +61,7 @@ window.onload = function showTasksOnScreen() {
         `
     }
 
-    const screen = document.getElementById('incompleteSection')
-    screen.innerHTML = dataToShow
+    const divScreen = document.getElementById('incompleteSection')
+    divScreen.innerHTML = dataToShow
 
 }
