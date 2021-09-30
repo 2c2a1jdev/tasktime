@@ -1,3 +1,5 @@
+let tasksArr = []
+
 function createNewTask(task) {
     let uid = Math.random().toString(12).slice(-5)
     task.toString()
@@ -11,9 +13,7 @@ function createNewTask(task) {
     return tasks
 }
 
-let tasksArr = []
-
-const getArrOnLocalStorage = () => {
+function getArrOnLocalStorage() {
     dataText = localStorage.getItem('tasksArr')
 
     if(dataText == null){
@@ -54,7 +54,7 @@ window.onload = function showTasksOnScreen() {
         checkId = "check" + count.toString()
         dataToShow += `
         <div class="content">
-            <input class="checkbox" type="checkbox" id="${checkId}" />
+            <input class="checkbox" type="checkbox" id="${checkId}" name="taskName" value="${t.ID}" onclick="getIdInputOnScreen()"/>
             <label for="${checkId}">${t.taskValue}</label>
             <button class="btn-outline">excluir</button>
         </div>  
@@ -65,3 +65,18 @@ window.onload = function showTasksOnScreen() {
     divScreen.innerHTML = dataToShow
 
 }
+
+function getIdInputOnScreen() {
+    const checkboxElements = document.getElementsByClassName('checkbox')
+    getArrOnLocalStorage()
+
+    for (i = 0; i < checkboxElements.length; i++) {
+        if (checkboxElements[i].checked == true) {
+            return uidTaskElementsOnScreen = checkboxElements[i].value
+            
+        }
+    }
+
+}
+
+function modifyisCompleted
