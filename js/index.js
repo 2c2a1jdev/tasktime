@@ -1,7 +1,8 @@
+// Declaração de lista para armazenar as tasks 
 let tasksArr = []
 
+// Lê os valores do localstorage, valida e mostra na tela
 window.onload = function showTasksOnScreen() {
-
     getArrOnLocalStorage()
 
     let dataToShowIfIncomplete = ""
@@ -41,6 +42,7 @@ window.onload = function showTasksOnScreen() {
 
 }
 
+// Resgata os valores salvos no localstorage
 function getArrOnLocalStorage() {
     dataText = localStorage.getItem('tasksArr')
 
@@ -53,6 +55,7 @@ function getArrOnLocalStorage() {
     return tasksArr
 }
 
+// Fabrica de criar tasks 
 function createNewTask(task) {
     let uid = Math.random().toString(12).slice(-5)
     task.toString()
@@ -66,7 +69,7 @@ function createNewTask(task) {
     return tasks
 }
 
-
+// Resgata o valor do input do user e salva no localstorage 
 function saveOnLocalStorage() {
     const task = document.getElementById('inputNewTask').value
 
@@ -81,7 +84,7 @@ function saveOnLocalStorage() {
     }
 }
 
-
+// Resgata qual a tarefa que o user completou
 function getValueOfInputChecked(inputs) {
     for (i = 0; i < inputs.length; i++) {
         if (inputs[i].checked === true) {
@@ -92,7 +95,6 @@ function getValueOfInputChecked(inputs) {
 }
 
 // TODO alterar a propriedade isComplete de uma task de false para true
-
 function modifyStatusTask(valueIndex) {
     for(i=0; i < tasksArr.length; i++) {
         if (tasksArr[i].ID === valueIndex) {
@@ -102,6 +104,7 @@ function modifyStatusTask(valueIndex) {
     }
 }
 
+// Evento do user que completa a task 
 function completeTask() {
     getArrOnLocalStorage()
     const checkboxElements = document.getElementsByClassName('checkbox')
