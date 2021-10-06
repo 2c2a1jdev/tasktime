@@ -125,6 +125,8 @@ footer {
     border-top: 1px solid rgba(130, 130, 130, 0.2);
     border-left: 1px solid rgba(130, 130, 130, 0.2);
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .content {
@@ -137,6 +139,8 @@ footer {
     border-top: 1px solid rgba(130, 130, 130, 0.2);
     border-left: 1px solid rgba(130, 130, 130, 0.2);
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .span {
