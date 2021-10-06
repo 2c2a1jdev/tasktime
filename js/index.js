@@ -94,12 +94,16 @@ function getValueOfInputChecked(inputs) {
     }
 }
 
-// TODO alterar a propriedade isComplete de uma task de false para true
+// Altera a propriedade isComplete de uma task de false para true
 function modifyStatusTask(valueIndex) {
     for(i=0; i < tasksArr.length; i++) {
         if (tasksArr[i].ID === valueIndex) {
-            tasksArr[i].isCompleted = true
-            console.log(tasksArr[i])
+            const y = tasksArr[i]
+            y.isCompleted = true
+            localStorage.clear()
+            const text = JSON.stringify(tasksArr)
+            localStorage.setItem("tasksArr", text)
+            location.reload()
         }
     }
 }
