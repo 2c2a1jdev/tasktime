@@ -4,7 +4,8 @@ window.onload = function showTasksOnScreen() {
 
     getArrOnLocalStorage()
 
-    let dataToShow = "";
+    let dataToShowIfIncomplete = ""
+    let dataToShowIfComplete = ""
     let checkId = ""
     let count = 0
 
@@ -12,17 +13,31 @@ window.onload = function showTasksOnScreen() {
         const t = tasksArr[i]
         count = count + 1
         checkId = "check" + count.toString()
-        dataToShow += `
-        <div class="content">
-            <input class="checkbox" type="checkbox" id="${checkId}" name="taskName" value="${t.ID}" onclick="completeTask()"/>
-            <label for="${checkId}">${t.taskValue}</label>
-            <button class="btn-outline">excluir</button>
-        </div>  
-        `
+
+        if (t.isCompleted === false) {
+            dataToShowIfIncomplete += `
+            <div class="content">
+                <input class="checkbox" type="checkbox" id="${checkId}" name="taskName" value="${t.ID}" onclick="completeTask()"/>
+                <label for="${checkId}">${t.taskValue}</label>
+                <button class="btn-outline">excluir</button>
+            </div>  
+            `
+        }
+
+        if (t.isCompleted === true) {
+            dataToShowIfComplete += `
+            <div class="content">
+                <p>${t.taskValue}</p>
+                <p class="span">50 minutos</p>
+            </div>
+            `
+        }
     }
 
-    const divScreen = document.getElementById('incompleteSection')
-    divScreen.innerHTML = dataToShow
+    const divScreenIncomplete = document.getElementById('incompleteSection')
+    const divScreenComplete = document.getElementById('completeSection')
+    divScreenIncomplete.innerHTML = dataToShowIfIncomplete
+    divScreenComplete.innerHTML = dataToShowIfComplete
 
 }
 
