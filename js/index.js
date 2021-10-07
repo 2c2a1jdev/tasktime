@@ -101,8 +101,8 @@ function modifyStatusTask(valueIndex) {
 // Evento do user que completa a task 
 function completeTask() {
     getArrOnLocalStorage()
-    const idTaskChecked = event.srcElement.value
-    modifyStatusTask(idTaskChecked)
+    const taskToComplete = event.srcElement.value
+    modifyStatusTask(taskToComplete)
 }
 
 
