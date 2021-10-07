@@ -107,7 +107,7 @@ footer {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 5vh 85vh 5vh;
+    grid-template-rows: 5vh 100fr 5vh;
     grid-gap: 8px;
     grid-template-areas: "header header header"
                          "inputSection incompleteSection completeSection"
