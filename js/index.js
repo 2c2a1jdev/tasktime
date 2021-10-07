@@ -84,16 +84,6 @@ function saveOnLocalStorage() {
     }
 }
 
-// Resgata qual a task que o user completou
-function getValueOfInputChecked(inputs) {
-    for (i = 0; i < inputs.length; i++) {
-        if (inputs[i].checked === true) {
-            const valueID = inputs[i].value
-            return valueID
-        }
-    }
-}
-
 // Altera a propriedade isComplete de uma task de false para true
 function modifyStatusTask(valueIndex) {
     for(i=0; i < tasksArr.length; i++) {
@@ -111,8 +101,7 @@ function modifyStatusTask(valueIndex) {
 // Evento do user que completa a task 
 function completeTask() {
     getArrOnLocalStorage()
-    const checkboxElements = document.getElementsByClassName('checkbox')
-    const idTaskChecked = getValueOfInputChecked(checkboxElements)
+    const idTaskChecked = event.srcElement.value
     modifyStatusTask(idTaskChecked)
 }
 
@@ -122,7 +111,6 @@ function deleteTaskOnLocalStorage(valueIndexToDelete) {
     toString(valueIndexToDelete)
     for(i=0; i < tasksArr.length; i++) {
         if(tasksArr[i].ID === valueIndexToDelete) {
-            console.log(tasksArr[i])
             tasksArr.pop(tasksArr[i])
             const text = JSON.stringify(tasksArr)
             localStorage.setItem("tasksArr", text)
