@@ -108,7 +108,6 @@ function completeTask() {
 
 // Remove a task do localstorage
 function deleteTaskOnLocalStorage(valueIndexToDelete) {
-    toString(valueIndexToDelete)
     for(i=0; i < tasksArr.length; i++) {
         if(tasksArr[i].ID === valueIndexToDelete) {
             tasksArr.pop(tasksArr[i])
