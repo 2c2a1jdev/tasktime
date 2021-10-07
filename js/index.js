@@ -20,7 +20,7 @@ window.onload = function showTasksOnScreen() {
             <div class="content">
                 <input class="checkbox" type="checkbox" id="${checkId}" name="taskName" value="${t.ID}" onclick="completeTask()"/>
                 <label for="${checkId}">${t.taskValue}</label>
-                <button class="btn-outline">excluir</button>
+                <button id="${t.ID}" onclick="deleteTask()" class="btn-outline delete">excluir</button>
             </div>  
             `
         }
@@ -84,7 +84,7 @@ function saveOnLocalStorage() {
     }
 }
 
-// Resgata qual a tarefa que o user completou
+// Resgata qual a task que o user completou
 function getValueOfInputChecked(inputs) {
     for (i = 0; i < inputs.length; i++) {
         if (inputs[i].checked === true) {
@@ -114,4 +114,27 @@ function completeTask() {
     const checkboxElements = document.getElementsByClassName('checkbox')
     const idTaskChecked = getValueOfInputChecked(checkboxElements)
     modifyStatusTask(idTaskChecked)
+}
+
+
+// Remove a task do localstorage
+function deleteTaskOnLocalStorage(valueIndexToDelete) {
+    toString(valueIndexToDelete)
+    for(i=0; i < tasksArr.length; i++) {
+        if(tasksArr[i].ID === valueIndexToDelete) {
+            console.log(tasksArr[i])
+            tasksArr.pop(tasksArr[i])
+            const text = JSON.stringify(tasksArr)
+            localStorage.setItem("tasksArr", text)
+            location.reload()
+        }
+    }
+}
+
+
+// Evento do user que exclui a task 
+function deleteTask() {
+    getArrOnLocalStorage()
+    const taskToDelete = event.srcElement.id
+    deleteTaskOnLocalStorage(taskToDelete)
 }
