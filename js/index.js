@@ -2,7 +2,7 @@
 let tasksArr = []
 
 // Lê os valores do localstorage, valida e mostra na tela
-window.onload = function showTasksOnScreen() {
+window.onload = function renderOnScreen() {
     getArrOnLocalStorage()
 
     let dataToShowIfIncomplete = ""
