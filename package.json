@@ -32,7 +32,6 @@
   },
   "homepage": "https://github.com/2c2a1jdev/taskslist#readme",
   "dependencies": {
-    "cep-promise": "^4.1.1",
     "node": "^16.9.1"
   }
 }
