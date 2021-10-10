@@ -92,7 +92,7 @@ function saveOnLocalStorage() {
     }
 }
 
-// Altera a propriedade isComplete de uma task de false para true
+// Altera as propriedades da task ao completar 
 function modifyObjTask(valueIndex) {
     end = Date.now()
     for(i=0; i < tasksArr.length; i++) {
