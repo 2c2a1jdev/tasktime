@@ -156,7 +156,7 @@ function formatDiffDate(diffInMilliseconds) {
     minutes = parseInt(inSeconds / 60)
     seconds = parseInt(inSeconds % 60)
 
-    span = `${day}d:${hours}h:${minutes}m:${seconds}s`
+    span = `${day}d: ${hours}h: ${minutes}m: ${seconds}s`
 
     return span 
 
