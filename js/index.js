@@ -25,13 +25,13 @@ window.onload = function renderOnScreen() {
             `
         }
 
-        const span = formatDiffDate(t.diff)
+        const timeUntilCompleted = formatDiffDate(t.diff)
 
         if (t.isCompleted === true) {
             dataToShowIfComplete += `
             <div class="content">
                 <p>${t.taskValue}</p>
-                <p class="span">${span}</p>
+                <p class="span">${timeUntilCompleted}</p>
             </div>
             `
         }
